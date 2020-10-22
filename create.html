@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Create Todo</title>
+<!--
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/style.css" />
+-->
+</head>
+<body>
+      <h1>Create Todo</h1>
+      <!-- Todo入力フォーム Begin -->
+      <form id="input-form" v-on:submit.prevent="handleSubmit">
+        <div class="input-text">
+          <table id="todo-table">
+            <tbody id="todo-main">
+              <tr>
+                <td>Todo名</td>
+                <td class="cell-text">
+                  <input v-model="todo.text"/>
+                </td>
+              </tr>
+              <tr>
+              	<td>優先度</td>
+                <td>
+                <select id="sort-menu" v-on:change="handleSort">
+                  <option value="priority-1">1</option>
+                  <option value="priority-2">2</option>
+                  <option value="priority-3">3</option>
+                  <option value="priority-4">4</option>
+                  <option value="priority-4">5</option>
+                </select>
+                </td>
+               </tr>
+               <tr>
+               </tr>
+             </tbody>
+           </table>
+        </div>
+      </form>
+      <!-- Todo入力フォーム End -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
