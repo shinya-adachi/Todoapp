@@ -27,19 +27,39 @@
               	<td>優先度</td>
                 <td>
                 <select id="sort-menu" v-on:change="handleSort">
-                  <option value="priority-1">1</option>
-                  <option value="priority-2">2</option>
-                  <option value="priority-3">3</option>
+                  <option value="priority-5">5</option>
                   <option value="priority-4">4</option>
-                  <option value="priority-4">5</option>
+                  <option value="priority-3">3</option>
+                  <option value="priority-2">2</option>
+                  <option value="priority-1" selected>1</option>
                 </select>
                 </td>
                </tr>
                <tr>
+                 <td>進捗度</td>
+                 <td>
+                   <input type="range" value="0" min="0" max="100" step="5"
+                   oninput="document.getElementById('output1').value=this.value">
+                   <output id="output1">0</output>
+                 </td>
+               </tr>
+               <tr>
+                 <td>期限</td>
+                 <td>
+                   <input type="date">
+                 </td>
+               </tr>
+               <tr>
+                 <td>想定時間(人日)</td>
+                 <td>
+                   <input type="number" >
+                 </td>
                </tr>
              </tbody>
            </table>
         </div>
+        <input type="submit" value="登録">
+        <input type="button" value="キャンセル">
       </form>
       <!-- Todo入力フォーム End -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
